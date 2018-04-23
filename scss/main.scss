@@ -1,25 +1,103 @@
 // Importa fonte do Google - Raleway 300 & 700
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,700');
 @import url('https://fonts.googleapis.com/css?family=Karla');
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
 
 // Fontes
 $raleway-font: 'Raleway', sans-serif;
 $karla-font: 'Karla', sans-serif;
+$merriweather-font: 'Merriweather', sans-serif;
 
 // Cores
 $gray-primary: #333;
 $gray-light: #ccc;
+$red-primary: #ab362c;
 
 // Medias
-$break-medium: 700px;
-$break-small: 550px;
+$break-medium: 750px;
+$break-small: 570px;
+
+// Sombras
+$shadow-down: 0px 3px 18px 0px rgba(0,0,0,0.5);
 
 * {box-sizing: border-box;}
 
 body {
     font-family: $raleway-font;
     margin: 0;
+    background-color: gray;
+    background: url(../img/interior-barbearia.jpg);
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+// Utilidades
+.t-center {
+    text-align: center;
+}
+.t-white {
+    color: white;
+}
+.t-red {
+    color: $red-primary;
 }
 
 @import 'navbar';
-@import 'content';
+
+// GRID
+.grid {
+    display: grid;
+
+    &.gc-1-4-1 {
+        grid-template-columns: 1fr 4fr 1fr;
+
+        &.gl-2 {
+            grid-template-areas:
+                ". first  ."
+                ". second .";
+        }
+    }
+    // Templates
+    & .g-first {grid-area: first;}
+    & .g-second {grid-area: second;}
+    & .g-third {grid-area: third;}
+}
+
+// Section mainBanner
+#mainBanner {
+    height: 90vh;
+}
+.main-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $merriweather-font;
+
+
+    & h1 {
+        font-size: 2em;
+        font-weight: 400;
+        color: white;
+    }
+}
+
+.main-logo img {
+    margin-top: 4em;
+    margin-bottom: 1em;
+    width: 70%;
+    @media (max-width: $break-medium){width: 85%;}
+    @media (max-width: $break-small){width: 100%;}
+}
+// ======================
+
+.row {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 71.25em;
+}
+
+#gallery {
+    height: 1000px;
+    background-color: white;
+}

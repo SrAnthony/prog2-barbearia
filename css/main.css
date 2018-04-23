@@ -1,20 +1,38 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,700");
 @import url("https://fonts.googleapis.com/css?family=Karla");
+@import url("https://fonts.googleapis.com/css?family=Merriweather");
 * {
   box-sizing: border-box; }
 
 body {
   font-family: "Raleway", sans-serif;
-  margin: 0; }
+  margin: 0;
+  background-color: gray;
+  background: url(../img/interior-barbearia.jpg);
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed; }
+
+.t-center {
+  text-align: center; }
+
+.t-white {
+  color: white; }
+
+.t-red {
+  color: #ab362c; }
+
+.navbar-bg {
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 3px 18px 0px rgba(0, 0, 0, 0.5); }
 
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-family: "Karla", sans-serif;
   padding: 0 25px;
-  min-height: 70px;
-  background-color: #333;
-  font-family: "Karla", sans-serif; }
+  min-height: 10vh; }
 
 .nav-list, .nav-social ul {
   display: flex;
@@ -30,14 +48,9 @@ body {
       color: white;
       transition: .3s ease-out; }
       .nav-list li a:hover, .nav-social ul li a:hover {
-        color: #ccc; }
-        .nav-list li a:hover .fa-facebook-f, .nav-social ul li a:hover .fa-facebook-f {
-          color: #3b5998; }
-        .nav-list li a:hover .fa-twitter, .nav-social ul li a:hover .fa-twitter {
-          color: #00aced; }
-        .nav-list li a:hover .fa-instagram, .nav-social ul li a:hover .fa-instagram {
-          color: #cd486b; }
-  @media (max-width: 550px) {
+        color: #ab362c;
+        transform: scale(1.3); }
+  @media (max-width: 570px) {
     .nav-list, .nav-social ul {
       display: none;
       justify-content: center;
@@ -51,14 +64,24 @@ body {
         .nav-list li:hover, .nav-social ul li:hover {
           background-color: white; }
           .nav-list li:hover a, .nav-social ul li:hover a {
-            color: black; } }
+            color: #ab362c; } }
 
 .nav-social {
   padding: 5px 5px;
   margin: 0 5px;
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
-  border-right: 1px solid rgba(255, 255, 255, 0.1); }
-  @media (max-width: 700px) {
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.2); }
+  .nav-social i {
+    transition: .1s ease-out; }
+    .nav-social i:hover {
+      transform: scale(1.2); }
+      .nav-social i:hover.fa-facebook-f {
+        color: #3b5998; }
+      .nav-social i:hover.fa-twitter {
+        color: #00aced; }
+      .nav-social i:hover.fa-instagram {
+        color: #cd486b; }
+  @media (max-width: 750px) {
     .nav-social {
       display: none; } }
 
@@ -66,18 +89,68 @@ body {
   color: white;
   cursor: pointer;
   font-size: 1.5em; }
-  @media (min-width: 550px) {
+  @media (min-width: 570px) {
     .responsive-icon {
       display: none; } }
 
-@media (min-width: 700px) {
+.nav-logo img {
+  width: 150px; }
+
+@media (min-width: 750px) {
   .btn-login {
     border: 1px solid white;
     border-radius: 3px;
+    box-shadow: 0px 3px 18px 0px rgba(0, 0, 0, 0.5);
     padding: 5px 25px; }
     .btn-login:hover {
-      border-color: white;
       background-color: white;
-      color: #333; } }
+      color: black !important;
+      text-shadow: none; } }
+
+.grid {
+  display: grid; }
+  .grid.gc-1-4-1 {
+    grid-template-columns: 1fr 4fr 1fr; }
+    .grid.gc-1-4-1.gl-2 {
+      grid-template-areas: ". first  ." ". second ."; }
+  .grid .g-first {
+    grid-area: first; }
+  .grid .g-second {
+    grid-area: second; }
+  .grid .g-third {
+    grid-area: third; }
+
+#mainBanner {
+  height: 90vh; }
+
+.main-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Merriweather", sans-serif; }
+  .main-title h1 {
+    font-size: 2em;
+    font-weight: 400;
+    color: white; }
+
+.main-logo img {
+  margin-top: 4em;
+  margin-bottom: 1em;
+  width: 70%; }
+  @media (max-width: 750px) {
+    .main-logo img {
+      width: 85%; } }
+  @media (max-width: 570px) {
+    .main-logo img {
+      width: 100%; } }
+
+.row {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 71.25em; }
+
+#gallery {
+  height: 1000px;
+  background-color: white; }
 
 /*# sourceMappingURL=main.css.map */
