@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,700");
 @import url("https://fonts.googleapis.com/css?family=Karla");
 @import url("https://fonts.googleapis.com/css?family=Merriweather");
+@import url("https://fonts.googleapis.com/css?family=Cabin");
 * {
   box-sizing: border-box; }
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "Merriweather", sans-serif;
   margin: 0;
   background-color: gray;
   background: url(../img/interior-barbearia.jpg);
@@ -31,7 +32,7 @@ body {
   align-items: center;
   justify-content: space-between;
   font-family: "Karla", sans-serif;
-  padding: 0 25px;
+  padding: 0;
   min-height: 10vh; }
 
 .nav-list, .nav-social ul {
@@ -81,7 +82,7 @@ body {
         color: #00aced; }
       .nav-social i:hover.fa-instagram {
         color: #cd486b; }
-  @media (max-width: 750px) {
+  @media (max-width: 770px) {
     .nav-social {
       display: none; } }
 
@@ -96,7 +97,7 @@ body {
 .nav-logo img {
   width: 150px; }
 
-@media (min-width: 750px) {
+@media (min-width: 770px) {
   .btn-login {
     border: 1px solid white;
     border-radius: 3px;
@@ -108,17 +109,19 @@ body {
       text-shadow: none; } }
 
 .grid {
-  display: grid; }
-  .grid.gc-1-4-1 {
-    grid-template-columns: 1fr 4fr 1fr; }
-    .grid.gc-1-4-1.gl-2 {
-      grid-template-areas: ". first  ." ". second ."; }
-  .grid .g-first {
-    grid-area: first; }
-  .grid .g-second {
-    grid-area: second; }
-  .grid .g-third {
-    grid-area: third; }
+  display: grid;
+  justify-items: center;
+  align-items: center; }
+  .grid.g-4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr; }
+    @media (max-width: 770px) {
+      .grid.g-4 {
+        grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 570px) {
+      .grid.g-4 {
+        grid-template-columns: 1fr; } }
+  .grid.gap-2 {
+    grid-gap: 2em; }
 
 #mainBanner {
   height: 90vh; }
@@ -126,31 +129,54 @@ body {
 .main-title {
   display: flex;
   justify-content: center;
-  align-items: center;
-  font-family: "Merriweather", sans-serif; }
-  .main-title h1 {
-    font-size: 2em;
-    font-weight: 400;
-    color: white; }
+  align-items: center; }
 
 .main-logo img {
   margin-top: 4em;
   margin-bottom: 1em;
   width: 70%; }
-  @media (max-width: 750px) {
+  @media (max-width: 770px) {
     .main-logo img {
       width: 85%; } }
   @media (max-width: 570px) {
     .main-logo img {
       width: 100%; } }
 
-.row {
-  width: 100%;
-  margin: 0 auto;
-  max-width: 71.25em; }
+h1 {
+  font-size: 2em;
+  font-weight: 400; }
 
-#gallery {
-  height: 1000px;
+.row {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 70em; }
+
+.small-row {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 35em; }
+
+.title {
+  padding-top: 2em; }
+
+.subtitle {
+  font-family: "Cabin", sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+  font-weight: normal; }
+
+#team {
   background-color: white; }
+  #team .team-photo img {
+    width: 100%; }
+  #team .team-photo h5 {
+    font-size: 1.125em;
+    font-weight: normal;
+    margin: 0;
+    margin-top: 0.8em; }
+  #team .team-photo p {
+    font-family: "Cabin", sans-serif;
+    font-size: 0.75em;
+    margin: 0; }
 
 /*# sourceMappingURL=main.css.map */
