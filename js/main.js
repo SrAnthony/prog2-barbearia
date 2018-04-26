@@ -1,5 +1,5 @@
 // Função executada quando clica no ícone de barras (responsividade)
-document.getElementById('responsiveBars').addEventListener("click", function () {
+document.getElementById('responsiveBars').addEventListener('click', function () {
     let nav = document.getElementsByClassName('nav-list')[0];
     let logo = document.getElementsByClassName('nav-logo')[0];
     if (nav.style.display == '') {
@@ -11,19 +11,22 @@ document.getElementById('responsiveBars').addEventListener("click", function () 
     }
 });
 
-document.getElementById('imgT').addEventListener("click", function () {
-    if (this.dataset.zoomed == '0'){
-        this.style.position = 'absolute';
-        this.style.top = '1675px';
-        this.style.left = '14%'
-        this.style.width = '1000px';
-        this.dataset.zoomed = '1';
-    }
-    else {
-        this.style.position = '';
-        this.style.top = '';
-        this.style.left = ''
-        this.style.width = '';
-        this.dataset.zoomed = '0';
-    }
+document.getElementById('galleryPrev').addEventListener('click', function () {
+    let active = document.querySelector('#workplaceImgs img.active');
+    active.classList.remove('active');
+
+    if (active.previousElementSibling != null)
+        active.previousElementSibling.classList.add('active');
+    else
+        active.parentElement.lastElementChild.classList.add('active');
+});
+
+document.getElementById('galleryNext').addEventListener('click', function () {
+    let active = document.querySelector('#workplaceImgs img.active');
+    active.classList.remove('active');
+
+    if (active.nextElementSibling != null)
+        active.nextElementSibling.classList.add('active');
+    else
+        active.parentElement.firstElementChild.classList.add('active');
 });

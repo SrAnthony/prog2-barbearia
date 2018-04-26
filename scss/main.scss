@@ -63,23 +63,11 @@ body {
             grid-template-columns: 1fr;
         }
     }
-    &.g-gallery {
-        grid-template-columns: repeat(5, 1fr);
-
-        @media (max-width: $break-medium) {
-            grid-template-columns: 1fr 1fr 1fr;
-        }
-        @media (max-width: $break-small) {
-            grid-template-columns: 1fr 1fr;
-        }
-    }
     &.gap-2 {
         grid-gap: 2em;
     }
-    &.gap-01 {
-        grid-gap: 0.1em;
-    }
 }
+
 
 h1 {
     margin-top: 0;
@@ -159,14 +147,43 @@ h1 {
     background-color: white;
     padding-bottom: 5em;
 
-    & .workplace-imgs {
+    & .workplace-gallery {
+        position: relative;
         & img {
-            width: 100%;
-//            transition: .2s ease-out;
+            display: none;
+            margin: 0 auto;
+            box-shadow: $shadow-down;
+            width: 80%;
+            @media (max-width: $break-medium){width: 90%;}
+            @media (max-width: $break-small){width: 100%;}
+        }
+        & .active {
+            display: block;
         }
     }
 }
 
+.gallery-nav {
+    position: absolute;
+    top:50%;
+    color: $red-primary;
+    text-shadow: $shadow-down;
+    cursor: pointer;
+    transition: .1s ease-out;
+
+    &#galleryNext{right:5px;}
+    &#galleryPrev{left:5px;}
+
+    &:hover {
+        transform: scale(1.2);
+        color: darken($red-primary, 5%);
+    }
+}
+
+#services {
+    background-color: white;
+    padding-bottom: 5em;
+}
 
 
 
