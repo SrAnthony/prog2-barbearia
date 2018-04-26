@@ -1,11 +1,9 @@
 // Importa fonte do Google - Raleway 300 & 700
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,700');
 @import url('https://fonts.googleapis.com/css?family=Karla');
 @import url('https://fonts.googleapis.com/css?family=Merriweather');
 @import url('https://fonts.googleapis.com/css?family=Cabin');
 
 // Fontes
-$raleway-font: 'Raleway', sans-serif;
 $karla-font: 'Karla', sans-serif;
 $merriweather-font: 'Merriweather', sans-serif;
 $cabin-font: 'Cabin', sans-serif;
@@ -45,6 +43,12 @@ body {
 .t-red {
     color: $red-primary;
 }
+.active {
+    display: block !important;
+}
+.bold {
+    font-weight: bold;
+}
 
 @import 'navbar';
 
@@ -68,12 +72,29 @@ body {
         grid-gap: 2em;
     }
 }
+.flex {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+
+    & li {
+        list-style-type: none;
+    }
+}
 
 
 h1 {
     margin-top: 0;
     font-size: 2em;
     font-weight: 400;
+}
+
+hr {
+    border: solid $gray-light;
+    border-width: 1px 0 0;
+    margin: 0 2em;
 }
 
 .row {
@@ -88,13 +109,15 @@ h1 {
     max-width: 35em;
 }
 
+// =================
 // SECTIONS
+// =================
 section:not(#mainBanner) {
     background-color: white;
     padding-bottom: 5em;
 }
 footer {
-    background-color: white;
+    background-color: $gray-lighter;
 }
 
 .title {
@@ -110,93 +133,79 @@ footer {
 
 #mainBanner {
     height: 90vh;
-}
-.main-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.main-logo img {
-    margin-top: 4em;
-    margin-bottom: 1em;
-    width: 70%;
-    @media (max-width: $break-medium){width: 85%;}
-    @media (max-width: $break-small){width: 100%;}
-}
+    & .main-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-#team {
-
-    & .team-photo {
-        & img {
-            width: 100%;
-            transition: .2s ease-out;
-            &:hover {
-                transform: scale(1.05);
-                box-shadow: $shadow-down;
-            }
-        }
-        & h5 {
-            font-size: 1.125em;
-            font-weight: normal;
-            margin: 0;
-            margin-top: 0.8em;
-        }
-        & p {
-            font-family: $cabin-font;
-            font-size: 0.75em;
-            margin: 0;
-        }
+    & .main-logo img {
+        margin-top: 4em;
+        margin-bottom: 1em;
+        width: 70%;
+        @media (max-width: $break-medium){width: 85%;}
+        @media (max-width: $break-small){width: 100%;}
     }
 }
 
-#workplace {
+// #team
+.team-photo {
 
-    & .workplace-gallery {
-        position: relative;
-        & img {
-            display: none;
-            margin: 0 auto;
+    & img {
+        width: 100%;
+        transition: .2s ease-out;
+        &:hover {
+            transform: scale(1.05);
             box-shadow: $shadow-down;
-            width: 80%;
-            @media (max-width: $break-medium){width: 90%;}
-            @media (max-width: $break-small){width: 100%;}
-        }
-        & .active {
-            display: block;
         }
     }
-}
-
-.gallery-nav {
-    position: absolute;
-    top:50%;
-    color: $red-primary;
-    text-shadow: $shadow-down;
-    cursor: pointer;
-    transition: .1s ease-out;
-
-    &#galleryNext{right:5px;}
-    &#galleryPrev{left:5px;}
-
-    &:hover {
-        transform: scale(1.2);
-        color: darken($red-primary, 5%);
+    & h5 {
+        font-size: 1.125em;
+        font-weight: normal;
+        margin: 0;
+        margin-top: 0.8em;
+    }
+    & p {
+        font-family: $cabin-font;
+        font-size: 0.75em;
+        margin: 0;
     }
 }
 
-.flex {
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    text-align: center;
+// #workplace
+.workplace-gallery {
 
-    & li {
-        list-style-type: none;
+    position: relative;
+
+    & img {
+        display: none;
+        margin: 0 auto;
+        box-shadow: $shadow-down;
+        width: 80%;
+        @media (max-width: $break-medium){width: 90%;}
+        @media (max-width: $break-small){width: 100%;}
+    }
+
+    & .gallery-nav {
+        position: absolute;
+        top:50%;
+        color: $red-primary;
+        text-shadow: $shadow-down;
+        cursor: pointer;
+        transition: .1s ease-out;
+
+        &#galleryNext{right:5px;}
+        &#galleryPrev{left:5px;}
+
+        &:hover {
+            transform: scale(1.2);
+            color: darken($red-primary, 5%);
+        }
     }
 }
 
+// #services
 .services-icons {
     flex-wrap: wrap;
     text-align: center;
@@ -224,60 +233,56 @@ footer {
     }
 }
 
-.google-maps {
-    position: relative;
-    padding-bottom: 45%;
-    height: 0;
-    overflow: hidden;
-    margin-bottom: 20px;
-    border: 1px solid #cccccc;
-}
-.google-maps iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
 #contact {
+    background-color: $gray-lighter !important;
+
     & p {
         text-align: center;
         font-family: $cabin-font;
     }
-}
-.bold {
-    font-weight: bold;
-}
 
-.phones {
-    flex-wrap: wrap;
-    & li {
-        margin: 1em;
+    & .google-maps {
+        position: relative;
+        padding-bottom: 45%;
+        height: 0;
+        overflow: hidden;
+        margin-bottom: 20px;
+        border: 1px solid #cccccc;
     }
-    & i {
-        color: lighten($red-primary, 10%);
-        transition: .2s ease;
-        &:hover {
-            color: $red-primary;
+
+    & .google-maps iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    & .phones {
+        flex-wrap: wrap;
+        & li {
+            margin: 1em;
+        }
+        & i {
+            color: lighten($red-primary, 10%);
+            transition: .2s ease;
+            &:hover {
+                color: $red-primary;
+            }
+        }
+    }
+
+    & .story {
+        font-size: 0.8em;
+        line-height: 1.7em;
+
+        & p {
+            margin: 0.3em;
         }
     }
 }
 
-.story {
-    font-size: 0.8em;
-    line-height: 1.7em;
-    p {
-        margin: 0.3em;
-    }
-}
-
-hr {
-    border: solid $gray-light;
-    border-width: 1px 0 0;
-    margin: 0 2em;
-}
-
+// Footer
 .footer-social {
     text-align: center;
     font-size: 1.7em;
@@ -290,8 +295,4 @@ hr {
             color: darken($gray-primary, 20%);
         }
     }
-}
-
-.bg-gray, footer {
-    background-color: $gray-lighter !important;
 }

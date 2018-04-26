@@ -30,3 +30,14 @@ document.getElementById('galleryNext').addEventListener('click', function () {
     else
         active.parentElement.firstElementChild.classList.add('active');
 });
+
+// Quando clica em uma âncora ele dá um efeito suave para o scroll da página
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
