@@ -195,8 +195,8 @@ footer {
         cursor: pointer;
         transition: .1s ease-out;
 
-        &#galleryNext{right:5px;}
-        &#galleryPrev{left:5px;}
+        &.gallery-next{right:3px;}
+        &.gallery-prev{left:3px;}
 
         &:hover {
             transform: scale(1.2);

@@ -11,25 +11,25 @@ document.getElementById('responsiveBars').addEventListener('click', function () 
     }
 });
 
-document.getElementById('galleryPrev').addEventListener('click', function () {
+// Botões da galeria
+function galleryBtn(direction) {
     let active = document.querySelector('#workplaceImgs img.active');
     active.classList.remove('active');
 
-    if (active.previousElementSibling != null)
-        active.previousElementSibling.classList.add('active');
-    else
-        active.parentElement.lastElementChild.classList.add('active');
-});
+    if (direction == 'next'){
+        if (active.nextElementSibling != null)
+            active.nextElementSibling.classList.add('active');
+        else
+            active.parentElement.firstElementChild.classList.add('active');
+    }
+    else { // Então 'prev'
+        if (active.previousElementSibling != null)
+            active.previousElementSibling.classList.add('active');
+        else
+            active.parentElement.lastElementChild.classList.add('active');
+    }
 
-document.getElementById('galleryNext').addEventListener('click', function () {
-    let active = document.querySelector('#workplaceImgs img.active');
-    active.classList.remove('active');
-
-    if (active.nextElementSibling != null)
-        active.nextElementSibling.classList.add('active');
-    else
-        active.parentElement.firstElementChild.classList.add('active');
-});
+}
 
 // Quando clica em uma âncora ele dá um efeito suave para o scroll da página
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -41,3 +41,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+// Salva a navbar (header)
+let myNav = document.getElementsByClassName('navbar-sticky')[0];
+// Salva a altura da section #mainBanner
+let bannerOff = document.getElementById('mainBanner').offsetHeight;
+
+window.onscroll = function () {
+    "use strict";
+    // Quando o usuário rola a página até o #mainBanner ele muda a cor da navbar
+    if (document.documentElement.scrollTop >= bannerOff ) {
+        myNav.classList.add("navbar-bg-solid");
+        myNav.classList.remove("navbar-bg-transp");
+    }
+    else {
+        myNav.classList.add("navbar-bg-transp");
+        myNav.classList.remove("navbar-bg-solid");
+    }
+};

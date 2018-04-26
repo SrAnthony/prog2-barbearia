@@ -1,7 +1,19 @@
-.navbar-bg {
+.navbar-bg-transp {
     background-color: rgba(0,0,0,0.4);
     box-shadow: $shadow-down;
 }
+
+.navbar-bg-solid {
+    background-color: rgba(0,0,0,0.9);
+    box-shadow: $shadow-down;
+}
+
+.navbar-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
 .navbar {
     display: flex;
     align-items: center;
@@ -87,7 +99,7 @@
 }
 
 .nav-logo img {
-    width: 150px
+    width: 140px
 }
 
 .btn-login {

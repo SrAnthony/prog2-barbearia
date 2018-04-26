@@ -28,9 +28,18 @@ body {
 .bold {
   font-weight: bold; }
 
-.navbar-bg {
+.navbar-bg-transp {
   background-color: rgba(0, 0, 0, 0.4);
   box-shadow: 0px 3px 18px 0px rgba(0, 0, 0, 0.5); }
+
+.navbar-bg-solid {
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0px 3px 18px 0px rgba(0, 0, 0, 0.5); }
+
+.navbar-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1; }
 
 .navbar {
   display: flex;
@@ -100,7 +109,7 @@ body {
       display: none; } }
 
 .nav-logo img {
-  width: 150px; }
+  width: 140px; }
 
 @media (min-width: 770px) {
   .btn-login {
@@ -229,10 +238,10 @@ footer {
     text-shadow: 0px 3px 18px 0px rgba(0, 0, 0, 0.5);
     cursor: pointer;
     transition: .1s ease-out; }
-    .workplace-gallery .gallery-nav#galleryNext {
-      right: 5px; }
-    .workplace-gallery .gallery-nav#galleryPrev {
-      left: 5px; }
+    .workplace-gallery .gallery-nav.gallery-next {
+      right: 3px; }
+    .workplace-gallery .gallery-nav.gallery-prev {
+      left: 3px; }
     .workplace-gallery .gallery-nav:hover {
       transform: scale(1.2);
       color: #973027; }
