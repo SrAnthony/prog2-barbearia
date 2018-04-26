@@ -224,4 +224,30 @@ h1 {
   background-color: white;
   padding-bottom: 5em; }
 
+.flex {
+  display: flex;
+  justify-content: center; }
+
+.services-icons {
+  flex-wrap: wrap;
+  padding: 0;
+  text-align: center; }
+  .services-icons li {
+    list-style-type: none;
+    margin: 1.4em; }
+    .services-icons li:hover img {
+      opacity: 1; }
+    .services-icons li:hover h5 {
+      color: #ab362c; }
+  .services-icons img {
+    width: 6.5em;
+    opacity: 0.5;
+    transition: .4s ease; }
+  .services-icons h5 {
+    font-size: 1.3em;
+    font-weight: normal;
+    color: #999;
+    margin: 0;
+    transition: .4s ease; }
+
 /*# sourceMappingURL=main.css.map */
