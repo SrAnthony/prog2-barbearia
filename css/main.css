@@ -142,6 +142,9 @@ section:not(#mainBanner) {
   background-color: white;
   padding-bottom: 5em; }
 
+footer {
+  background-color: white; }
+
 .title {
   padding-top: 2em; }
 
@@ -286,5 +289,23 @@ section:not(#mainBanner) {
   line-height: 1.7em; }
   .story p {
     margin: 0.3em; }
+
+hr {
+  border: solid #ccc;
+  border-width: 1px 0 0;
+  margin: 0 2em; }
+
+.footer-social {
+  text-align: center;
+  font-size: 1.7em; }
+  .footer-social i {
+    color: #999;
+    margin: 1em 0.4em;
+    transition: .3s ease; }
+    .footer-social i:hover {
+      color: #666666; }
+
+.bg-gray, footer {
+  background-color: #f2f2f2 !important; }
 
 /*# sourceMappingURL=main.css.map */

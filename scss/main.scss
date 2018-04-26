@@ -13,6 +13,7 @@ $cabin-font: 'Cabin', sans-serif;
 // Cores
 $gray-primary: #999;
 $gray-light: #ccc;
+$gray-lighter: #f2f2f2;
 $red-primary: #ab362c;
 
 // Medias
@@ -91,6 +92,9 @@ h1 {
 section:not(#mainBanner) {
     background-color: white;
     padding-bottom: 5em;
+}
+footer {
+    background-color: white;
 }
 
 .title {
@@ -266,4 +270,28 @@ section:not(#mainBanner) {
     p {
         margin: 0.3em;
     }
+}
+
+hr {
+    border: solid $gray-light;
+    border-width: 1px 0 0;
+    margin: 0 2em;
+}
+
+.footer-social {
+    text-align: center;
+    font-size: 1.7em;
+
+    i {
+        color: $gray-primary;
+        margin: 1em 0.4em;
+        transition: .3s ease;
+        &:hover {
+            color: darken($gray-primary, 20%);
+        }
+    }
+}
+
+.bg-gray, footer {
+    background-color: $gray-lighter !important;
 }
