@@ -59,7 +59,6 @@ body {
 // GRID
 .grid {
     display: grid;
-    justify-items: center;
     align-items: center;
 
     &.g-4 {
@@ -123,7 +122,7 @@ hr {
 // =================
 // SECTIONS
 // =================
-section:not(#mainBanner) {
+section:not(#introduction) {
     background-color: white;
     padding-bottom: 5em;
 }
@@ -142,7 +141,7 @@ footer {
     padding-bottom: 1.5em;
 }
 
-#mainBanner {
+#introduction {
     height: 90vh;
 
     & .main-title {
@@ -202,7 +201,6 @@ footer {
         position: absolute;
         top:50%;
         color: $red-primary;
-        text-shadow: $shadow-down;
         cursor: pointer;
         transition: .1s ease-out;
 

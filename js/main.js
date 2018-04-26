@@ -45,7 +45,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Salva a navbar (header)
 let myNav = document.getElementsByClassName('navbar-sticky')[0];
 // Salva a altura da section #mainBanner
-let bannerOff = document.getElementById('mainBanner').offsetHeight;
+let bannerOff = document.getElementById('introduction').offsetHeight;
 
 window.onscroll = function () {
     "use strict";
