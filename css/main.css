@@ -138,6 +138,10 @@ h1 {
   margin: 0 auto;
   max-width: 35em; }
 
+section:not(#mainBanner) {
+  background-color: white;
+  padding-bottom: 5em; }
+
 .title {
   padding-top: 2em; }
 
@@ -167,43 +171,39 @@ h1 {
     .main-logo img {
       width: 100%; } }
 
-#team {
-  background-color: white;
-  padding-bottom: 5em; }
-  #team .team-photo img {
-    width: 100%;
-    transition: .2s ease-out; }
-    #team .team-photo img:hover {
-      transform: scale(1.05);
-      box-shadow: 0px 3px 18px 0px rgba(0, 0, 0, 0.5); }
-  #team .team-photo h5 {
-    font-size: 1.125em;
-    font-weight: normal;
-    margin: 0;
-    margin-top: 0.8em; }
-  #team .team-photo p {
-    font-family: "Cabin", sans-serif;
-    font-size: 0.75em;
-    margin: 0; }
+#team .team-photo img {
+  width: 100%;
+  transition: .2s ease-out; }
+  #team .team-photo img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 3px 18px 0px rgba(0, 0, 0, 0.5); }
 
-#workplace {
-  background-color: white;
-  padding-bottom: 5em; }
-  #workplace .workplace-gallery {
-    position: relative; }
-    #workplace .workplace-gallery img {
-      display: none;
-      margin: 0 auto;
-      box-shadow: 0px 3px 18px 0px rgba(0, 0, 0, 0.5);
-      width: 80%; }
-      @media (max-width: 770px) {
-        #workplace .workplace-gallery img {
-          width: 90%; } }
-      @media (max-width: 570px) {
-        #workplace .workplace-gallery img {
-          width: 100%; } }
-    #workplace .workplace-gallery .active {
-      display: block; }
+#team .team-photo h5 {
+  font-size: 1.125em;
+  font-weight: normal;
+  margin: 0;
+  margin-top: 0.8em; }
+
+#team .team-photo p {
+  font-family: "Cabin", sans-serif;
+  font-size: 0.75em;
+  margin: 0; }
+
+#workplace .workplace-gallery {
+  position: relative; }
+  #workplace .workplace-gallery img {
+    display: none;
+    margin: 0 auto;
+    box-shadow: 0px 3px 18px 0px rgba(0, 0, 0, 0.5);
+    width: 80%; }
+    @media (max-width: 770px) {
+      #workplace .workplace-gallery img {
+        width: 90%; } }
+    @media (max-width: 570px) {
+      #workplace .workplace-gallery img {
+        width: 100%; } }
+  #workplace .workplace-gallery .active {
+    display: block; }
 
 .gallery-nav {
   position: absolute;
@@ -220,20 +220,19 @@ h1 {
     transform: scale(1.2);
     color: #973027; }
 
-#services {
-  background-color: white;
-  padding-bottom: 5em; }
-
 .flex {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  text-align: center; }
+  .flex li {
+    list-style-type: none; }
 
 .services-icons {
   flex-wrap: wrap;
-  padding: 0;
   text-align: center; }
   .services-icons li {
-    list-style-type: none;
     margin: 1.4em; }
     .services-icons li:hover img {
       opacity: 1; }
@@ -249,5 +248,43 @@ h1 {
     color: #999;
     margin: 0;
     transition: .4s ease; }
+
+.google-maps {
+  position: relative;
+  padding-bottom: 45%;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 1px solid #cccccc; }
+
+.google-maps iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+#contact p {
+  text-align: center;
+  font-family: "Cabin", sans-serif; }
+
+.bold {
+  font-weight: bold; }
+
+.phones {
+  flex-wrap: wrap; }
+  .phones li {
+    margin: 1em; }
+  .phones i {
+    color: #cd483d;
+    transition: .2s ease; }
+    .phones i:hover {
+      color: #ab362c; }
+
+.story {
+  font-size: 0.8em;
+  line-height: 1.7em; }
+  .story p {
+    margin: 0.3em; }
 
 /*# sourceMappingURL=main.css.map */

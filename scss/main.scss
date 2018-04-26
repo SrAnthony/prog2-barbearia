@@ -88,6 +88,11 @@ h1 {
 }
 
 // SECTIONS
+section:not(#mainBanner) {
+    background-color: white;
+    padding-bottom: 5em;
+}
+
 .title {
     padding-top: 2em;
 }
@@ -117,8 +122,6 @@ h1 {
 }
 
 #team {
-    background-color: white;
-    padding-bottom: 5em;
 
     & .team-photo {
         & img {
@@ -144,8 +147,6 @@ h1 {
 }
 
 #workplace {
-    background-color: white;
-    padding-bottom: 5em;
 
     & .workplace-gallery {
         position: relative;
@@ -180,26 +181,23 @@ h1 {
     }
 }
 
-#services {
-    background-color: white;
-    padding-bottom: 5em;
-}
-
-
-
-
 .flex {
     display: flex;
     justify-content: center;
-}
-
-.services-icons {
-    flex-wrap: wrap;
     padding: 0;
+    margin: 0;
     text-align: center;
 
     & li {
         list-style-type: none;
+    }
+}
+
+.services-icons {
+    flex-wrap: wrap;
+    text-align: center;
+
+    & li {
         margin: 1.4em;
         &:hover {
             & img {opacity: 1;}
@@ -219,5 +217,53 @@ h1 {
         color: $gray-primary;
         margin: 0;
         transition: .4s ease;
+    }
+}
+
+.google-maps {
+    position: relative;
+    padding-bottom: 45%;
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+}
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#contact {
+    & p {
+        text-align: center;
+        font-family: $cabin-font;
+    }
+}
+.bold {
+    font-weight: bold;
+}
+
+.phones {
+    flex-wrap: wrap;
+    & li {
+        margin: 1em;
+    }
+    & i {
+        color: lighten($red-primary, 10%);
+        transition: .2s ease;
+        &:hover {
+            color: $red-primary;
+        }
+    }
+}
+
+.story {
+    font-size: 0.8em;
+    line-height: 1.7em;
+    p {
+        margin: 0.3em;
     }
 }
