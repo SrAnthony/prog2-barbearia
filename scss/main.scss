@@ -20,6 +20,7 @@ $break-small: 570px;
 
 // Sombras
 $shadow-down: 0px 3px 18px 0px rgba(0,0,0,0.5);
+$shadow-light: 0px 1px 2px 0px rgba(0,0,0,0.2);
 
 * {box-sizing: border-box;}
 
@@ -49,6 +50,9 @@ body {
 .bold {
     font-weight: bold;
 }
+.spacing-v {
+    margin: 4em auto !important;
+}
 
 @import 'navbar';
 
@@ -65,6 +69,13 @@ body {
             grid-template-columns: 1fr 1fr;
         }
         @media (max-width: $break-small) {
+            grid-template-columns: 1fr;
+        }
+    }
+    &.g-2 {
+        grid-template-columns: 1fr 1fr;
+
+        @media (max-width: $break-medium) {
             grid-template-columns: 1fr;
         }
     }
@@ -293,6 +304,36 @@ footer {
         transition: .3s ease;
         &:hover {
             color: darken($gray-primary, 20%);
+        }
+    }
+}
+
+.contact-form {
+    background-color: darken($gray-lighter, 3%);
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 1em;
+    width: 100%;
+
+    & input, & textarea {
+        margin: 5px;
+        padding: 10px 7px;
+        width: 97%;
+        border: none;
+        border-radius: 3px;
+        box-shadow: $shadow-light;
+
+        &[type="submit"] {
+            padding: 10px;
+            cursor: pointer;
+            color: white;
+            background-color: $red-primary;
+            border: none;
+            border-radius: 3px;
+
+            &:hover {
+                background-color: darken($red-primary, 3%);
+            }
         }
     }
 }

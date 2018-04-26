@@ -28,6 +28,9 @@ body {
 .bold {
   font-weight: bold; }
 
+.spacing-v {
+  margin: 4em auto !important; }
+
 .navbar-bg-transp {
   background-color: rgba(0, 0, 0, 0.4);
   box-shadow: 0px 3px 18px 0px rgba(0, 0, 0, 0.5); }
@@ -133,6 +136,11 @@ body {
         grid-template-columns: 1fr 1fr; } }
     @media (max-width: 570px) {
       .grid.g-4 {
+        grid-template-columns: 1fr; } }
+  .grid.g-2 {
+    grid-template-columns: 1fr 1fr; }
+    @media (max-width: 770px) {
+      .grid.g-2 {
         grid-template-columns: 1fr; } }
   .grid.gap-2 {
     grid-gap: 2em; }
@@ -308,5 +316,28 @@ footer {
     transition: .3s ease; }
     .footer-social i:hover {
       color: #666666; }
+
+.contact-form {
+  background-color: #eaeaea;
+  border-radius: 3px;
+  padding: 10px;
+  margin-bottom: 1em;
+  width: 100%; }
+  .contact-form input, .contact-form textarea {
+    margin: 5px;
+    padding: 10px 7px;
+    width: 97%;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2); }
+    .contact-form input[type="submit"], .contact-form textarea[type="submit"] {
+      padding: 10px;
+      cursor: pointer;
+      color: white;
+      background-color: #ab362c;
+      border: none;
+      border-radius: 3px; }
+      .contact-form input[type="submit"]:hover, .contact-form textarea[type="submit"]:hover {
+        background-color: #9f3229; }
 
 /*# sourceMappingURL=main.css.map */

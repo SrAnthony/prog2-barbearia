@@ -191,13 +191,23 @@
     </section>
 
     <section id="contact" class="bg-gray">
-        <div class="small-row">
-            <h1 class="title t-center t-red">
-                Contate-nos!
-            </h1>
-            <h3 class="subtitle t-center">Respeitando o passado, nossa intenção não é reinventar o comércio de barbeiros, apenas para aperfeiçoar o ofício de higiene masculina.</h3>
-            <p class="bold">Horários</p>
-            <p>Seg: 9:00-17:00, Ter-Sex: 9:00-19:00 & Sáb: 9:00-18:00</p>
+        <h1 class="title t-center t-red">
+            Contate-nos!
+        </h1>
+        <div class="row grid g-2 gap-2 spacing-v">
+            <div style="align-self: start;">
+                <h3 class="subtitle t-center">Respeitando o passado, nossa intenção não é reinventar o comércio de barbeiros, apenas para aperfeiçoar o ofício de higiene masculina.</h3>
+                <p class="bold">Horários</p>
+                <p>Seg: 9:00-17:00, Ter-Sex: 9:00-19:00 & Sáb: 9:00-18:00</p>
+            </div>
+            <div class="contact-form">
+                <form action="#">
+                    <input type="text" name="Nome" placeholder="Nome *" title="Insira o seu nome" required><br>
+                    <input type="email" name="Email" placeholder="Email *" title="Insira o seu email" required><br>
+                    <textarea name="Mensagem" rows="4" placeholder="Mensagem *" title="Qual a sua mensagem?" minlength="10" required></textarea>
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
         </div>
         <div class="row">
             <div class="google-maps">
